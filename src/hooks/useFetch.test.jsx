@@ -61,7 +61,7 @@ test("it should pass for long waiting response", async () => {
   expect(result.current.data).toEqual(["1", "2", "3"]);
 });
 
-test("it should abort when url change", async () => {
+test("it should abort and fetch new when url change", async () => {
   const mockUrlSlow = "http://my-backend/fake-date";
   const mockUrlFast = "http://my-backend/fake-date/fast";
   server.use(
